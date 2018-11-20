@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on rench&#39;s blog</title>
+    <link>https://rench1988.github.io/tags/</link>
+    <description>Recent content in Tags on rench&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-EN</language>
+    <managingEditor>finyren@example.com (rench)</managingEditor>
+    <webMaster>finyren@example.com (rench)</webMaster>
+    <copyright>(c) 2015 rench.</copyright>
+    <lastBuildDate>Tue, 20 Nov 2018 17:26:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://rench1988.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog</title>
+      <link>https://rench1988.github.io/tags/blog/</link>
+      <pubDate>Tue, 20 Nov 2018 17:26:00 +0800</pubDate>
+      <author>finyren@example.com (rench)</author>
+      <guid>https://rench1988.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
