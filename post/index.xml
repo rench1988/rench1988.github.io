@@ -15,12 +15,12 @@
     
     
     <item>
-      <title>My First Post</title>
-      <link>https://rench1988.github.io/2018/11/20/my-first-post/</link>
+      <title>golang article</title>
+      <link>https://rench1988.github.io/2018/11/20/golang-article/</link>
       <pubDate>Tue, 20 Nov 2018 17:26:00 +0800</pubDate>
       <author>finyren@example.com (rench)</author>
-      <guid>https://rench1988.github.io/2018/11/20/my-first-post/</guid>
-      <description></description>
+      <guid>https://rench1988.github.io/2018/11/20/golang-article/</guid>
+      <description>Go Data Structures: Interfaces</description>
     </item>
     
   </channel>
