@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on rench&#39;s blog</title>
-    <link>https://rench1988.github.io/post/</link>
-    <description>Recent content in Posts on rench&#39;s blog</description>
+    <title>Lte on rench&#39;s blog</title>
+    <link>https://rench1988.github.io/tags/lte/</link>
+    <description>Recent content in Lte on rench&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <managingEditor>finyren@example.com (rench)</managingEditor>
@@ -11,7 +11,7 @@
     <copyright>(c) 2015 rench.</copyright>
     <lastBuildDate>Thu, 31 Jan 2019 10:42:00 +0800</lastBuildDate>
     
-	<atom:link href="https://rench1988.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rench1988.github.io/tags/lte/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,15 +21,6 @@
       <author>finyren@example.com (rench)</author>
       <guid>https://rench1988.github.io/2019/01/31/lte-tunnel/</guid>
       <description>从ue发出的ip数据包, 无论其目的地址是什么, 该ip数据包都要封装在gtp tunnel里面, 然后由enodeb发往pgw, 如下面的图(a)</description>
-    </item>
-    
-    <item>
-      <title>golang article</title>
-      <link>https://rench1988.github.io/2018/11/20/golang-article/</link>
-      <pubDate>Tue, 20 Nov 2018 17:26:00 +0800</pubDate>
-      <author>finyren@example.com (rench)</author>
-      <guid>https://rench1988.github.io/2018/11/20/golang-article/</guid>
-      <description>Go Data Structures: Interfaces laws-of-reflection</description>
     </item>
     
   </channel>

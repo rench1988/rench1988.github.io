@@ -9,10 +9,19 @@
     <managingEditor>finyren@example.com (rench)</managingEditor>
     <webMaster>finyren@example.com (rench)</webMaster>
     <copyright>(c) 2015 rench.</copyright>
-    <lastBuildDate>Tue, 20 Nov 2018 17:26:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 31 Jan 2019 10:42:00 +0800</lastBuildDate>
     
 	<atom:link href="https://rench1988.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>lte tunnel</title>
+      <link>https://rench1988.github.io/2019/01/31/lte-tunnel/</link>
+      <pubDate>Thu, 31 Jan 2019 10:42:00 +0800</pubDate>
+      <author>finyren@example.com (rench)</author>
+      <guid>https://rench1988.github.io/2019/01/31/lte-tunnel/</guid>
+      <description>从ue发出的ip数据包, 无论其目的地址是什么, 该ip数据包都要封装在gtp tunnel里面, 然后由enodeb发往pgw, 如下面的图(a)</description>
+    </item>
     
     <item>
       <title>golang article</title>
@@ -20,7 +29,7 @@
       <pubDate>Tue, 20 Nov 2018 17:26:00 +0800</pubDate>
       <author>finyren@example.com (rench)</author>
       <guid>https://rench1988.github.io/2018/11/20/golang-article/</guid>
-      <description>Go Data Structures: Interfaces</description>
+      <description>Go Data Structures: Interfaces laws-of-reflection</description>
     </item>
     
   </channel>
