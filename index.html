@@ -165,7 +165,8 @@
   
     从ue发出的ip数据包, 无论其目的地址是什么, 该ip数据包都要封装在gtp tunnel里面, 然后由eNB发往pgw, 如下面的图(a)
 1. UE to eNB 假设ue往google服务器74.125.71.104发包, 该数据包先通过radio link发往eNB,从ue发出的原始数据包如下所示: 2. eNB to S-GW eNB收到从ue发来的数据包后, 往该数据包ip header前面添加一个gtp tunnel header, 该gtp tunnel header包含3个独立的头部(gtp header, udp header, ip header for GTP tunneling). 从eNB到S-GW的数据包如下所示: 由于前面gtp tunnel header的存在, 路由就能根据外部的ip头部把包发往指定的sgw
-3. S-GW to PGW S-GW收到eNB的数据包后, 修改外部的gtp tunnel header, 修改后的数据包如下所示: 4. P-GW to PDN (www.google.com) P-GW收到数据包后, 剥离外部的gtp tunnel header, 把数据包发往internet, 如下所示: gtp tunnel header中teid的解释 由于同时会有很多个ue与sgw和pgw建立联系, 那么就会同时存在很多个gtp tunnel(每个ue可以有多个tunnel), teid就是用于标识这个tunnel是属于哪个ue的. 如图b里面标识的, 关于某个ue的从eNB到sgw的uplink tunnel通过TEID = UL S1-TEID (ex.
+3. S-GW to PGW S-GW收到eNB的数据包后, 修改外部的gtp tunnel header, 修改后的数据包如下所示: 4. P-GW to PDN (www.google.com) P-GW收到数据包后, 剥离外部的gtp tunnel header, 把数据包发往internet, 如下所示:
+gtp tunnel header中teid的解释 由于同时会有很多个ue与sgw和pgw建立联系, 那么就会同时存在很多个gtp tunnel(每个ue可以有多个tunnel), teid就是用于标识这个tunnel是属于哪个ue的. 如图b里面标识的, 关于某个ue的从eNB到sgw的uplink tunnel通过TEID = UL S1-TEID (ex.
   
 
 
