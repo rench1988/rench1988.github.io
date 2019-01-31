@@ -47,7 +47,7 @@
     },
     "datePublished": "2019-01-31",
     "description": "",
-    "wordCount": 6
+    "wordCount": 38
   }
 </script>
 
@@ -174,7 +174,7 @@
 
   
   &middot; Read in about 1 min
-  &middot; (6 Words)
+  &middot; (38 Words)
   <br>
   
 <a class="label" href="https://rench1988.github.io/tags/lte">lte</a>
@@ -186,9 +186,22 @@
 </header>
 
   <div class="container content">
-  <p>从ue发出的ip数据包, 无论其目的地址是什么, 该ip数据包都要封装在gtp tunnel里面, 然后由enodeb发往pgw, 如下面的图(a)</p>
+  
 
-<p><img src="https://www.netmanias.com/ko/?m=attach&amp;no=2488" alt="图a" /></p>
+<p>从ue发出的ip数据包, 无论其目的地址是什么, 该ip数据包都要封装在gtp tunnel里面, 然后由eNB发往pgw, 如下面的图(a)</p>
+
+<h3 id="1-ue-to-enb">1. UE to eNB</h3>
+
+<p>假设ue往google服务器74.125.71.104发包, 该数据包先通过radio link发往eNB,从ue发出的原始数据包如下所示:
+<img src="https://www.netmanias.com/ko/?m=attach&amp;no=2484" alt="ue to eNB" /></p>
+
+<h3 id="2-enb-to-s-gw">2. eNB to S-GW</h3>
+
+<p>eNB收到从ue发来的数据包后, 往该数据包ip header前面添加一个gtp tunnel header, 该gtp tunnel header包含3个独立的头部(gtp header, udp header, ip header for GTP tunneling). 从eNB到S-GW的数据包如下所示:
+<img src="https://www.netmanias.com/ko/?m=attach&amp;no=2485" alt="eNB to S-GW" />
+由于前面gtp tunnel header的存在, 路由就能根据外部的ip头部把包发往指定的sgw</p>
+
+<p><img src="https://www.netmanias.com/ko/?m=attach&amp;no=2488" alt="图a&amp;b" /></p>
 
 </div>
 
