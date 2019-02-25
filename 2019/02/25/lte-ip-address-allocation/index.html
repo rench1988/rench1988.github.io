@@ -47,7 +47,7 @@
     },
     "datePublished": "2019-02-25",
     "description": "",
-    "wordCount": 27
+    "wordCount": 123
   }
 </script>
 
@@ -174,7 +174,7 @@
 
   
   &middot; Read in about 1 min
-  &middot; (27 Words)
+  &middot; (123 Words)
   <br>
   
 <a class="label" href="https://rench1988.github.io/tags/lte">lte</a>
@@ -212,9 +212,45 @@
 
 <h1 id="2-ip地址分配的类型">2.ip地址分配的类型</h1>
 
+<p>当ue初始附着lte网络时,会请求一个pdn连接. pgw会为ue分配一个ip地址, 通过这个ip地址, ue可以使用pdn提供的数据服务.</p>
+
+<p>pgw分配ip地址有两种方式(静态ip地址分配和动态ip地址分配). 动态ip地址分配是在ue接入网络的时候, pgw自动分配一个ip地址给ue(每次分配的不一样). 静态ip地址分配的时候, pgw会根据ue选择指定的ip地址分配(每次分配的相同). 图1比较了这两种不同的类型.</p>
+
+<p><img src="https://www.netmanias.com/en/?m=attach&amp;no=17118" alt="图1" /><br />
+图1. IP Address Allocation Schemes</p>
+
+<p>在动态ip地址分配的情况下, ue每次附着都会获取到不同的ip地址. pgw有一个ip地址池, ue每次附着的时候都会自动选一个地址分配出去.</p>
+
+<p>在静态ip地址分配的情况下, ue的ip地址已经写入了hss, 所以每次分配的都是同一个ip地址.</p>
+
 <h1 id="3-动态ip地址分配">3.动态ip地址分配</h1>
 
+<p>动态ip地址分配会保留一个地址池, 在ue初始附着的时候动态分配一个地址给ue.如图2.</p>
+
+<p><img src="https://www.netmanias.com/en/?m=attach&amp;no=17117" alt="图2" /><br />
+图2. Procedure for Dynamic IP Address Allocation</p>
+
+<p>在pgw里面, ip地址池以及dns服务器地址都已经配置好了.<br />
+PGW
+- IP Pool: 1.1.0.0/16 (1.1.1.1 ~ 1.1.255.254)
+- DNS server IP address:     Primary DNS: 10.1.1.1  Secondary DNS: 10.1.1.2</p>
+
 <h1 id="4-静态ip地址分配">4.静态ip地址分配</h1>
+
+<p>静态ip地址分配在ue subscribes的时候就已经确定. 过程如图3.</p>
+
+<p><img src="https://www.netmanias.com/en/?m=attach&amp;no=17116" alt="图3" /><br />
+图3.Procedure for Static IP Address Allocation</p>
+
+<p>在HSS中, 地址信息已经分配好.<br />
+HSS<br />
+- UE1: PDN type: IPv4,   PDN address: 1.1.1.1
+- UE2: PDN type: IPv4,   PDN address: 1.1.1.2
+- &hellip;</p>
+
+<p>在PGW中, dns地址信息已经分配好.<br />
+P-GW
+- DNS server IP address:     Primary DNS: 10.1.1.1 Secondary DNS: 10.1.1.2</p>
 
 <h1 id="5-总结">5.总结</h1>
 
