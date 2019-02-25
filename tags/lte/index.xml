@@ -22,7 +22,7 @@
       <guid>https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/</guid>
       <description>翻译原文地址
 这篇文档讨论isp怎么分配ip地址给ue, ip地址分配可以分为动态ip地址分配和静态ip地址分配,这篇文档会讨论这两种地址分配的机制以及它们的的异同.
-内容  介绍 ip地址分配的类型 动态ip地址分配 静态ip地址分配 总结  1.介绍 lte网络都是基于ip的网络, 用户的数据包都是通过ip数据包来传送的. 当ue加入lte网络的时候,一个PDN(Packet Data Network)地址(该地址仅在该pdn里面使用)会分配给ue, 同时该ue会建立一个默认的承载(ue和pgw之间), 该默认承载和ip地址会一直保持有效, 直到ue从lte网络detach.(这里可以理解为ip地址属于默认承载的一部分?).
+内容  介绍 ip地址分配的类型 动态ip地址分配 静态ip地址分配  1.介绍 lte网络都是基于ip的网络, 用户的数据包都是通过ip数据包来传送的. 当ue加入lte网络的时候,一个PDN(Packet Data Network)地址(该地址仅在该pdn里面使用)会分配给ue, 同时该ue会建立一个默认的承载(ue和pgw之间), 该默认承载和ip地址会一直保持有效, 直到ue从lte网络detach.(这里可以理解为ip地址属于默认承载的一部分?).
 ue可能会同时有多个apn, 每个apn会建立一个默认承载和分配一个ip地址, ip地址可以分为ipv4, ipv6, ipv4/ipv6.
 2.ip地址分配的类型 当ue初始附着lte网络时,会请求一个pdn连接. pgw会为ue分配一个ip地址, 通过这个ip地址, ue可以使用pdn提供的数据服务.
 pgw分配ip地址有两种方式(静态ip地址分配和动态ip地址分配). 动态ip地址分配是在ue接入网络的时候, pgw自动分配一个ip地址给ue(每次分配的不一样). 静态ip地址分配的时候, pgw会根据ue选择指定的ip地址分配(每次分配的相同). 图1比较了这两种不同的类型.
@@ -32,7 +32,9 @@ pgw分配ip地址有两种方式(静态ip地址分配和动态ip地址分配). �
 3.动态ip地址分配 动态ip地址分配会保留一个地址池, 在ue初始附着的时候动态分配一个地址给ue.如图2.
 图2. Procedure for Dynamic IP Address Allocation
 在pgw里面, ip地址池以及dns服务器地址都已经配置好了.
-PGW - IP Pool: 1.1.0.0/16 (1.1.1.1 ~ 1.1.255.254) - DNS server IP address: Primary DNS: 10.</description>
+PGW
+IP Pool: 1.1.0.0/16 (1.1.1.1 ~ 1.1.255.254)
+DNS server IP address: Primary DNS: 10.</description>
     </item>
     
     <item>

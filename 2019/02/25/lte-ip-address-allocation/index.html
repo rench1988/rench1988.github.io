@@ -47,7 +47,7 @@
     },
     "datePublished": "2019-02-25",
     "description": "",
-    "wordCount": 123
+    "wordCount": 115
   }
 </script>
 
@@ -174,7 +174,7 @@
 
   
   &middot; Read in about 1 min
-  &middot; (123 Words)
+  &middot; (115 Words)
   <br>
   
 <a class="label" href="https://rench1988.github.io/tags/lte">lte</a>
@@ -199,7 +199,6 @@
 <li><a href="#2.ip地址分配的类型">ip地址分配的类型</a></li>
 <li><a href="#3.动态ip地址分配">动态ip地址分配</a></li>
 <li><a href="#4.静态ip地址分配">静态ip地址分配</a></li>
-<li><a href="#5.总结">总结</a></li>
 </ul>
 
 <h1 id="1-介绍">1.介绍</h1>
@@ -231,9 +230,9 @@
 图2. Procedure for Dynamic IP Address Allocation</p>
 
 <p>在pgw里面, ip地址池以及dns服务器地址都已经配置好了.<br />
-PGW
-- IP Pool: 1.1.0.0/16 (1.1.1.1 ~ 1.1.255.254)
-- DNS server IP address:     Primary DNS: 10.1.1.1  Secondary DNS: 10.1.1.2</p>
+PGW<br />
+IP Pool: 1.1.0.0/16 (1.1.1.1 ~ 1.1.255.254)<br />
+DNS server IP address:   Primary DNS: 10.1.1.1  Secondary DNS: 10.1.1.2</p>
 
 <h1 id="4-静态ip地址分配">4.静态ip地址分配</h1>
 
@@ -244,15 +243,13 @@ PGW
 
 <p>在HSS中, 地址信息已经分配好.<br />
 HSS<br />
-- UE1: PDN type: IPv4,   PDN address: 1.1.1.1
-- UE2: PDN type: IPv4,   PDN address: 1.1.1.2
-- &hellip;</p>
+UE1: PDN type: IPv4,   PDN address: 1.1.1.1<br />
+UE2: PDN type: IPv4,   PDN address: 1.1.1.2<br />
+&hellip;</p>
 
 <p>在PGW中, dns地址信息已经分配好.<br />
-P-GW
-- DNS server IP address:     Primary DNS: 10.1.1.1 Secondary DNS: 10.1.1.2</p>
-
-<h1 id="5-总结">5.总结</h1>
+P-GW<br />
+DNS server IP address:   Primary DNS: 10.1.1.1 Secondary DNS: 10.1.1.2</p>
 
 </div>
 
