@@ -9,10 +9,22 @@
     <managingEditor>finyren@example.com (rench)</managingEditor>
     <webMaster>finyren@example.com (rench)</webMaster>
     <copyright>(c) 2015 rench.</copyright>
-    <lastBuildDate>Thu, 31 Jan 2019 10:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Feb 2019 15:29:00 +0800</lastBuildDate>
     
 	<atom:link href="https://rench1988.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>lte ip address allocation</title>
+      <link>https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/</link>
+      <pubDate>Mon, 25 Feb 2019 15:29:00 +0800</pubDate>
+      <author>finyren@example.com (rench)</author>
+      <guid>https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/</guid>
+      <description> 翻译原文地址
+这篇文档讨论isp怎么分配ip地址给ue, ip地址分配可以分为动态ip地址分配和静态ip地址分配,这篇文档会讨论这两种地址分配的机制以及它们的的异同.
+内容  介绍 ip地址分配的类型 动态ip地址分配 静态ip地址分配 总结  1.介绍 lte网络都是基于ip的网络, 用户的数据包都是通过ip数据包来传送的. 当ue加入lte网络的时候,一个PDN(Packet Data Network)地址(该地址仅在该pdn里面使用)会分配给ue, 同时该ue会建立一个默认的承载(ue和pgw之间), 该默认承载和ip地址会一直保持有效, 直到ue从lte网络detach.(这里可以理解为ip地址属于默认承载的一部分?).
+2.ip地址分配的类型 3.动态ip地址分配 4.静态ip地址分配 5.总结 </description>
+    </item>
     
     <item>
       <title>lte tunnel</title>

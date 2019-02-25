@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>rench&#39;s blog </title>
+  <title>lte ip address allocation  &middot; rench&#39;s blog</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -14,22 +14,46 @@
 
 <meta name="description" content="" />
 
-<meta name="keywords" content="">
+<meta name="keywords" content="lte, ">
 
 
-<meta property="og:title" content="rench&#39;s blog ">
+<meta property="og:title" content="lte ip address allocation  &middot; rench&#39;s blog ">
 <meta property="og:site_name" content="rench&#39;s blog"/>
-<meta property="og:url" content="https://rench1988.github.io/" />
+<meta property="og:url" content="https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/" />
 <meta property="og:locale" content="en-EN">
 
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2019-02-25T15:29:00&#43;08:00" />
+<meta property="og:article:modified_time" content="2019-02-25T15:29:00&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="lte">
+    
+  
+
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "lte ip address allocation",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2019-02-25",
+    "description": "",
+    "wordCount": 22
+  }
+</script>
 
 
 
-<link href="https://rench1988.github.io/index.xml" rel="alternate" type="application/rss+xml" title="rench&#39;s blog" />
-
-<link rel="canonical" href="https://rench1988.github.io/" />
+<link rel="canonical" href="https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://rench1988.github.io/touch-icon-144-precomposed.png">
 <link href="https://rench1988.github.io/favicon.png" rel="icon">
@@ -139,114 +163,103 @@
 </header>
 
 
-<section id="main-content" class="container main_content homepage">
-  <header class="container header">
-    <h1>rench&#39;s blog
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>lte ip address allocation
 </h1>
 
-    <span>last update: <time datetime="2019-02-25T15:29:00&#43;08:00">25 February at 3:29pm</time>
-</span>
+  <div class="metas">
+<time datetime="2019-02-25">25 Feb, 2019</time>
 
-  </header>
-  
-  
-    <article class="container content summary">
-  <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/">lte ip address allocation
-</a>
-</h2>
 
-  <time datetime="2019-02-25">25 Feb, 2019</time>
+  
+  &middot; Read in about 1 min
+  &middot; (22 Words)
+  <br>
+  
+<a class="label" href="https://rench1988.github.io/tags/lte">lte</a>
+
+
 
 </div>
 
-  <p class="container content">
-  
-  
-     翻译原文地址
-这篇文档讨论isp怎么分配ip地址给ue, ip地址分配可以分为动态ip地址分配和静态ip地址分配,这篇文档会讨论这两种地址分配的机制以及它们的的异同.
-内容  介绍 ip地址分配的类型 动态ip地址分配 静态ip地址分配 总结  1.介绍 lte网络都是基于ip的网络, 用户的数据包都是通过ip数据包来传送的. 当ue加入lte网络的时候,一个PDN(Packet Data Network)地址(该地址仅在该pdn里面使用)会分配给ue, 同时该ue会建立一个默认的承载(ue和pgw之间), 该默认承载和ip地址会一直保持有效, 直到ue从lte网络detach.(这里可以理解为ip地址属于默认承载的一部分?).
-2.ip地址分配的类型 3.动态ip地址分配 4.静态ip地址分配 5.总结 
+</header>
+
+  <div class="container content">
   
 
+<p><a href="https://www.netmanias.com/en/?m=view&amp;id=techdocs&amp;no=7246">翻译原文地址</a></p>
 
-</p>
+<p>这篇文档讨论isp怎么分配ip地址给ue, ip地址分配可以分为动态ip地址分配和静态ip地址分配,这篇文档会讨论这两种地址分配的机制以及它们的的异同.</p>
 
+<h1 id="内容">内容</h1>
 
-  <div class="container readlink">
-  <a href="https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/">Read more &rarr;</a>
+<ul>
+<li><a href="#1.介绍">介绍</a></li>
+<li><a href="#2.ip地址分配的类型">ip地址分配的类型</a></li>
+<li><a href="#3.动态ip地址分配">动态ip地址分配</a></li>
+<li><a href="#4.静态ip地址分配">静态ip地址分配</a></li>
+<li><a href="#5.总结">总结</a></li>
+</ul>
+
+<h1 id="1-介绍">1.介绍</h1>
+
+<p>lte网络都是基于ip的网络, 用户的数据包都是通过ip数据包来传送的. 当ue加入lte网络的时候,一个PDN(Packet Data Network)地址(该地址仅在该pdn里面使用)会分配给ue, 同时该ue会建立一个默认的承载(ue和pgw之间), 该默认承载和ip地址会一直保持有效, 直到ue从lte网络detach.(这里可以理解为ip地址属于默认承载的一部分?).</p>
+
+<h1 id="2-ip地址分配的类型">2.ip地址分配的类型</h1>
+
+<h1 id="3-动态ip地址分配">3.动态ip地址分配</h1>
+
+<h1 id="4-静态ip地址分配">4.静态ip地址分配</h1>
+
+<h1 id="5-总结">5.总结</h1>
 
 </div>
 
+
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
+  
+  
+
+    
+    <a class="prev" href="https://rench1988.github.io/2019/01/31/lte-tunnel/" title="lte tunnel">
+      Previous
+    </a>
+    
+
+    
+
+  
+
+
+</div>
+
+  <div class="container comments">
+  <h2>Comments</h2>
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
 
 </article>
-
-  
-    <article class="container content summary">
-  <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/01/31/lte-tunnel/">lte tunnel
-</a>
-</h2>
-
-  <time datetime="2019-01-31">31 Jan, 2019</time>
-
-</div>
-
-  <p class="container content">
-  
-  
-    从ue发出的ip数据包, 无论其目的地址是什么, 该ip数据包都要封装在gtp tunnel里面, 然后由eNB发往pgw, 如下面的图(a)
-1. UE to eNB 假设ue往google服务器74.125.71.104发包, 该数据包先通过radio link发往eNB,从ue发出的原始数据包如下所示: 2. eNB to S-GW eNB收到从ue发来的数据包后, 往该数据包ip header前面添加一个gtp tunnel header, 该gtp tunnel header包含3个独立的头部(gtp header, udp header, ip header for GTP tunneling). 从eNB到S-GW的数据包如下所示: 由于前面gtp tunnel header的存在, 路由就能根据外部的ip头部把包发往指定的sgw
-3. S-GW to PGW S-GW收到eNB的数据包后, 修改外部的gtp tunnel header, 修改后的数据包如下所示: 4. P-GW to PDN (www.google.com) P-GW收到数据包后, 剥离外部的gtp tunnel header, 把数据包发往internet, 如下所示:
-gtp tunnel header中teid的解释 由于同时会有很多个ue与sgw和pgw建立联系, 那么就会同时存在很多个gtp tunnel(每个ue可以有多个tunnel), teid就是用于标识这个tunnel是属于哪个ue的. 如图b里面标识的, 关于某个ue的从eNB到sgw的uplink tunnel通过TEID = UL S1-TEID (ex.
-  
-
-
-</p>
-
-
-  <div class="container readlink">
-  <a href="https://rench1988.github.io/2019/01/31/lte-tunnel/">Read more &rarr;</a>
-
-</div>
-
-
-</article>
-
-  
-    <article class="container content summary">
-  <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2018/11/20/golang-article/">golang article
-</a>
-</h2>
-
-  <time datetime="2018-11-20">20 Nov, 2018</time>
-
-</div>
-
-  <p class="container content">
-  
-  
-    Go Data Structures: Interfaces laws-of-reflection
-  
-
-
-</p>
-
-
-  <div class="container readlink">
-  <a href="https://rench1988.github.io/2018/11/20/golang-article/">Read more &rarr;</a>
-
-</div>
-
-
-</article>
-
-  
-  
-
-</section>
-
       <footer id="main-footer" class="container main_footer">
   
 
