@@ -159,7 +159,7 @@
   <p class="container content">
   
   
-    在用libpcap capture packet时, os会分配一个&rsquo;os buffer&rsquo;来保存接收的包, 该&raquo;os buffer&raquo;是由固定大小的slot组成的. 该&raquo;os buffer&raquo;的默认大小是2M, 如果将snapshot length的大小设置为65535, 则slot的大小就是32(65535 * 32 = 2M). 如果包到达速度非常快, 而包处理函数比较慢, 就会造成slot占满, 就会造成丢包.
+    在用libpcap capture packet时, os会分配一个&rsquo;os buffer&rsquo;来保存接收的包, 该&rsquo;os buffer&rsquo;是由固定大小的slot组成的. 该&rsquo;os buffer&rsquo;的默认大小是2M, 如果将snapshot length的大小设置为65535, 则slot的大小就是32(65535 * 32 = 2M). 如果包到达速度非常快, 而包处理函数比较慢, 就会造成slot占满, 就会造成丢包.
 将snapshot length的大小调小, 就会有更多的slot, 能缓存更多的包.
   
 
