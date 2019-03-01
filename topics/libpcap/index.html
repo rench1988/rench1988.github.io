@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>golang article  &middot; rench&#39;s blog</title>
+  <title>Libpcap  &middot; rench&#39;s blog</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -14,46 +14,22 @@
 
 <meta name="description" content="" />
 
-<meta name="keywords" content="golang, ">
+<meta name="keywords" content="">
 
 
-<meta property="og:title" content="golang article  &middot; rench&#39;s blog ">
+<meta property="og:title" content="Libpcap  &middot; rench&#39;s blog ">
 <meta property="og:site_name" content="rench&#39;s blog"/>
-<meta property="og:url" content="https://rench1988.github.io/2018/11/20/golang-article/" />
+<meta property="og:url" content="https://rench1988.github.io/topics/libpcap/" />
 <meta property="og:locale" content="en-EN">
 
 
-<meta property="og:type" content="article" />
-<meta property="og:description" content=""/>
-<meta property="og:article:published_time" content="2018-11-20T17:26:00&#43;08:00" />
-<meta property="og:article:modified_time" content="2018-11-20T17:26:00&#43;08:00" />
-
-  
-    
-<meta property="og:article:tag" content="golang">
-    
-  
-
-  
-
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Article",
-    "headline": "golang article",
-    "author": {
-      "@type": "Person",
-      "name": "http://profiles.google.com/+?rel=author"
-    },
-    "datePublished": "2018-11-20",
-    "description": "",
-    "wordCount": 5
-  }
-</script>
+<meta property="og:type" content="website" />
 
 
 
-<link rel="canonical" href="https://rench1988.github.io/2018/11/20/golang-article/" />
+<link href="https://rench1988.github.io/topics/libpcap/index.xml" rel="alternate" type="application/rss+xml" title="Libpcap" />
+
+<link rel="canonical" href="https://rench1988.github.io/topics/libpcap/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://rench1988.github.io/touch-icon-144-precomposed.png">
 <link href="https://rench1988.github.io/favicon.png" rel="icon">
@@ -163,82 +139,46 @@
 </header>
 
 
-<article id="main-content" class="container main_content single">
-  <header class="container hat">
-  <h1>golang article
+<section id="main-content" class="container main_content">
+  <header class="container">
+    <h1>Libpcap
 </h1>
 
-  <div class="metas">
-<time datetime="2018-11-20">20 Nov, 2018</time>
-
-
+  </header>
   
-  &middot; Read in about 1 min
-  &middot; (5 Words)
-  <br>
-  
-<a class="label" href="https://rench1988.github.io/tags/golang">golang</a>
+    <article class="container content summary">
+  <div class="container hat">
+  <h2><a href="https://rench1988.github.io/2018/11/20/libpcap%E4%B8%ADsnapshot-length%E7%9A%84%E4%BD%9C%E7%94%A8/">libpcap中snapshot length的作用
+</a>
+</h2>
 
-
+  <time datetime="2018-11-20">20 Nov, 2018</time>
 
 </div>
 
-</header>
+  <p class="container content">
+  
+  
+    在用libpcap capture packet时, os会分配一个&raquo;os buffer&raquo;来保存接收的包, 该&raquo;os buffer&raquo;是由固定大小的slot组成的. 该&raquo;os buffer&raquo;的默认大小是2M, 如果将snapshot length的大小设置为65535, 则slot的大小就是32(65535 * 32 = 2M). 如果包到达速度非常快, 而包处理函数比较慢, 就会造成slot占满, 就会造成丢包.
+将snapshot length的大小调小, 就会有更多的slot, 能缓存更多的包.
+  
 
-  <div class="container content">
-  <p><a href="https://research.swtch.com/interfaces">Go Data Structures: Interfaces</a>
-<a href="https://blog.golang.org/laws-of-reflection">laws-of-reflection</a></p>
+
+</p>
+
+
+  <div class="container readlink">
+  <a href="https://rench1988.github.io/2018/11/20/libpcap%E4%B8%ADsnapshot-length%E7%9A%84%E4%BD%9C%E7%94%A8/">Read more &rarr;</a>
 
 </div>
 
-
-  <footer class="container">
-  <div class="container navigation no-print">
-  <h2>Navigation</h2>
-  
-  
-
-    
-    <a class="prev" href="https://rench1988.github.io/2018/11/20/libpcap%E4%B8%ADsnapshot-length%E7%9A%84%E4%BD%9C%E7%94%A8/" title="libpcap中snapshot length的作用">
-      Previous
-    </a>
-    
-
-    
-    <a class="next" href="https://rench1988.github.io/2019/01/31/lte-tunnel/" title="lte tunnel">
-      Next
-    </a>
-    
-
-  
-
-
-</div>
-
-  <div class="container comments">
-  <h2>Comments</h2>
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  (function() {
-    
-    
-    if (window.location.hostname == "localhost")
-      return;
-
-    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
-    dsq.src = '//enten.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-</div>
-
-</footer>
 
 </article>
+
+  
+  
+
+</section>
       <footer id="main-footer" class="container main_footer">
   
 

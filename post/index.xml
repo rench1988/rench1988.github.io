@@ -58,5 +58,15 @@ gtp tunnel header中teid的解释 由于同时会有很多个ue与sgw和pgw建�
       <description>Go Data Structures: Interfaces laws-of-reflection</description>
     </item>
     
+    <item>
+      <title>libpcap中snapshot length的作用</title>
+      <link>https://rench1988.github.io/2018/11/20/libpcap%E4%B8%ADsnapshot-length%E7%9A%84%E4%BD%9C%E7%94%A8/</link>
+      <pubDate>Tue, 20 Nov 2018 17:26:00 +0800</pubDate>
+      <author>finyren@example.com (rench)</author>
+      <guid>https://rench1988.github.io/2018/11/20/libpcap%E4%B8%ADsnapshot-length%E7%9A%84%E4%BD%9C%E7%94%A8/</guid>
+      <description>在用libpcap capture packet时, os会分配一个&amp;raquo;os buffer&amp;raquo;来保存接收的包, 该&amp;raquo;os buffer&amp;raquo;是由固定大小的slot组成的. 该&amp;raquo;os buffer&amp;raquo;的默认大小是2M, 如果将snapshot length的大小设置为65535, 则slot的大小就是32(65535 * 32 = 2M). 如果包到达速度非常快, 而包处理函数比较慢, 就会造成slot占满, 就会造成丢包.
+将snapshot length的大小调小, 就会有更多的slot, 能缓存更多的包.</description>
+    </item>
+    
   </channel>
 </rss>
