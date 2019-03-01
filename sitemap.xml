@@ -23,19 +23,13 @@
   </url>
   
   <url>
-    <loc>https://rench1988.github.io/tags/golang/</loc>
-    <lastmod>2018-11-20T17:26:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://rench1988.github.io/topics/golang/</loc>
     <lastmod>2018-11-20T17:26:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rench1988.github.io/tags/libpcap/</loc>
+    <loc>https://rench1988.github.io/tags/golang/</loc>
     <lastmod>2018-11-20T17:26:00+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -47,13 +41,19 @@
   </url>
   
   <url>
-    <loc>https://rench1988.github.io/tags/lte/</loc>
-    <lastmod>2019-02-25T15:29:00+08:00</lastmod>
+    <loc>https://rench1988.github.io/tags/libpcap/</loc>
+    <lastmod>2018-11-20T17:26:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rench1988.github.io/topics/lte/</loc>
+    <lastmod>2019-02-25T15:29:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rench1988.github.io/tags/lte/</loc>
     <lastmod>2019-02-25T15:29:00+08:00</lastmod>
     <priority>0</priority>
   </url>
