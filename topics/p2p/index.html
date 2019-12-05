@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>rench&#39;s blog </title>
+  <title>P2p  &middot; rench&#39;s blog</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -17,9 +17,9 @@
 <meta name="keywords" content="">
 
 
-<meta property="og:title" content="rench&#39;s blog ">
+<meta property="og:title" content="P2p  &middot; rench&#39;s blog ">
 <meta property="og:site_name" content="rench&#39;s blog"/>
-<meta property="og:url" content="https://rench1988.github.io/" />
+<meta property="og:url" content="https://rench1988.github.io/topics/p2p/" />
 <meta property="og:locale" content="en-EN">
 
 
@@ -27,9 +27,9 @@
 
 
 
-<link href="https://rench1988.github.io/index.xml" rel="alternate" type="application/rss+xml" title="rench&#39;s blog" />
+<link href="https://rench1988.github.io/topics/p2p/index.xml" rel="alternate" type="application/rss+xml" title="P2p" />
 
-<link rel="canonical" href="https://rench1988.github.io/" />
+<link rel="canonical" href="https://rench1988.github.io/topics/p2p/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://rench1988.github.io/touch-icon-144-precomposed.png">
 <link href="https://rench1988.github.io/favicon.png" rel="icon">
@@ -139,16 +139,12 @@
 </header>
 
 
-<section id="main-content" class="container main_content homepage">
-  <header class="container header">
-    <h1>rench&#39;s blog
+<section id="main-content" class="container main_content">
+  <header class="container">
+    <h1>P2p
 </h1>
 
-    <span>last update: <time datetime="2019-12-05T10:43:30&#43;08:00">5 December at 10:43am</time>
-</span>
-
   </header>
-  
   
     <article class="container content summary">
   <div class="container hat">
@@ -200,144 +196,9 @@ nat设备中会记录类似如下的映射关系:
 </article>
 
   
-    <article class="container content summary">
-  <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/">lte ip address allocation
-</a>
-</h2>
-
-  <time datetime="2019-02-25">25 Feb, 2019</time>
-
-</div>
-
-  <p class="container content">
-  
-  
-    翻译原文地址
-这篇文档讨论isp怎么分配ip地址给ue, ip地址分配可以分为动态ip地址分配和静态ip地址分配,这篇文档会讨论这两种地址分配的机制以及它们的的异同.
-内容  介绍 ip地址分配的类型 动态ip地址分配 静态ip地址分配  1.介绍 lte网络都是基于ip的网络, 用户的数据包都是通过ip数据包来传送的. 当ue加入lte网络的时候,一个PDN(Packet Data Network)地址(该地址仅在该pdn里面使用)会分配给ue, 同时该ue会建立一个默认的承载(ue和pgw之间), 该默认承载和ip地址会一直保持有效, 直到ue从lte网络detach.(这里可以理解为ip地址属于默认承载的一部分?).
-ue可能会同时有多个apn, 每个apn会建立一个默认承载和分配一个ip地址, ip地址可以分为ipv4, ipv6, ipv4/ipv6.
-2.ip地址分配的类型 当ue初始附着lte网络时,会请求一个pdn连接. pgw会为ue分配一个ip地址, 通过这个ip地址, ue可以使用pdn提供的数据服务.
-pgw分配ip地址有两种方式(静态ip地址分配和动态ip地址分配). 动态ip地址分配是在ue接入网络的时候, pgw自动分配一个ip地址给ue(每次分配的不一样). 静态ip地址分配的时候, pgw会根据ue选择指定的ip地址分配(每次分配的相同). 图1比较了这两种不同的类型.
-图1. IP Address Allocation Schemes
-在动态ip地址分配的情况下, ue每次附着都会获取到不同的ip地址. pgw有一个ip地址池, ue每次附着的时候都会自动选一个地址分配出去.
-在静态ip地址分配的情况下, ue的ip地址已经写入了hss, 所以每次分配的都是同一个ip地址.
-3.动态ip地址分配 动态ip地址分配会保留一个地址池, 在ue初始附着的时候动态分配一个地址给ue.如图2.
-图2. Procedure for Dynamic IP Address Allocation
-在pgw里面, ip地址池以及dns服务器地址都已经配置好了.
-PGW
-IP Pool: 1.1.0.0/16 (1.1.1.1 ~ 1.1.255.254)
-DNS server IP address: Primary DNS: 10.
-  
-
-
-</p>
-
-
-  <div class="container readlink">
-  <a href="https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/">Read more &rarr;</a>
-
-</div>
-
-
-</article>
-
-  
-    <article class="container content summary">
-  <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/01/31/lte-tunnel/">lte tunnel
-</a>
-</h2>
-
-  <time datetime="2019-01-31">31 Jan, 2019</time>
-
-</div>
-
-  <p class="container content">
-  
-  
-    从ue发出的ip数据包, 无论其目的地址是什么, 该ip数据包都要封装在gtp tunnel里面, 然后由eNB发往pgw, 如下面的图(a)
-1. UE to eNB 假设ue往google服务器74.125.71.104发包, 该数据包先通过radio link发往eNB,从ue发出的原始数据包如下所示: 2. eNB to S-GW eNB收到从ue发来的数据包后, 往该数据包ip header前面添加一个gtp tunnel header, 该gtp tunnel header包含3个独立的头部(gtp header, udp header, ip header for GTP tunneling). 从eNB到S-GW的数据包如下所示: 由于前面gtp tunnel header的存在, 路由就能根据外部的ip头部把包发往指定的sgw
-3. S-GW to PGW S-GW收到eNB的数据包后, 修改外部的gtp tunnel header, 修改后的数据包如下所示: 4. P-GW to PDN (www.google.com) P-GW收到数据包后, 剥离外部的gtp tunnel header, 把数据包发往internet, 如下所示:
-gtp tunnel header中teid的解释 由于同时会有很多个ue与sgw和pgw建立联系, 那么就会同时存在很多个gtp tunnel(每个ue可以有多个tunnel), teid就是用于标识这个tunnel是属于哪个ue的. 如图b里面标识的, 关于某个ue的从eNB到sgw的uplink tunnel通过TEID = UL S1-TEID (ex.
-  
-
-
-</p>
-
-
-  <div class="container readlink">
-  <a href="https://rench1988.github.io/2019/01/31/lte-tunnel/">Read more &rarr;</a>
-
-</div>
-
-
-</article>
-
-  
-    <article class="container content summary">
-  <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2018/11/20/golang-article/">golang article
-</a>
-</h2>
-
-  <time datetime="2018-11-20">20 Nov, 2018</time>
-
-</div>
-
-  <p class="container content">
-  
-  
-    Go Data Structures: Interfaces laws-of-reflection
-  
-
-
-</p>
-
-
-  <div class="container readlink">
-  <a href="https://rench1988.github.io/2018/11/20/golang-article/">Read more &rarr;</a>
-
-</div>
-
-
-</article>
-
-  
-    <article class="container content summary">
-  <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2018/11/20/libpcap%E4%B8%ADsnapshot-length%E7%9A%84%E4%BD%9C%E7%94%A8/">libpcap中snapshot length的作用
-</a>
-</h2>
-
-  <time datetime="2018-11-20">20 Nov, 2018</time>
-
-</div>
-
-  <p class="container content">
-  
-  
-    在用libpcap capture packet时, os会分配一个&rsquo;os buffer&rsquo;来保存接收的包, 该&rsquo;os buffer&rsquo;是由固定大小的slot组成的. 该&rsquo;os buffer&rsquo;的默认大小是2M, 如果将snapshot length的大小设置为65535, 则slot的大小就是32(65535 * 32 = 2M). 如果包到达速度非常快, 而包处理函数比较慢, 就会造成slot占满, 就会造成丢包.
-将snapshot length的大小调小, 就会有更多的slot, 能缓存更多的包.
-  
-
-
-</p>
-
-
-  <div class="container readlink">
-  <a href="https://rench1988.github.io/2018/11/20/libpcap%E4%B8%ADsnapshot-length%E7%9A%84%E4%BD%9C%E7%94%A8/">Read more &rarr;</a>
-
-</div>
-
-
-</article>
-
-  
   
 
 </section>
-
       <footer id="main-footer" class="container main_footer">
   
 

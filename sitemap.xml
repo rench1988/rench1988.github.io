@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rench1988.github.io/2019/12/05/nat%E8%AE%BE%E5%A4%87%E7%9A%84%E7%B1%BB%E5%9E%8B/</loc>
+    <lastmod>2019-12-05T10:43:30+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/</loc>
     <lastmod>2019-02-25T15:29:00+08:00</lastmod>
   </url>
@@ -59,8 +64,20 @@
   </url>
   
   <url>
+    <loc>https://rench1988.github.io/tags/network/</loc>
+    <lastmod>2019-12-05T10:43:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rench1988.github.io/topics/p2p/</loc>
+    <lastmod>2019-12-05T10:43:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rench1988.github.io/post/</loc>
-    <lastmod>2019-02-25T15:29:00+08:00</lastmod>
+    <lastmod>2019-12-05T10:43:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -78,7 +95,7 @@
   
   <url>
     <loc>https://rench1988.github.io/</loc>
-    <lastmod>2019-02-25T15:29:00+08:00</lastmod>
+    <lastmod>2019-12-05T10:43:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   

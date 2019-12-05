@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>P2p on rench&#39;s blog</title>
+    <link>https://rench1988.github.io/topics/p2p/</link>
+    <description>Recent content in P2p on rench&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-EN</language>
+    <managingEditor>finyren@example.com (rench)</managingEditor>
+    <webMaster>finyren@example.com (rench)</webMaster>
+    <copyright>(c) 2015 rench.</copyright>
+    <lastBuildDate>Thu, 05 Dec 2019 10:43:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://rench1988.github.io/topics/p2p/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nat设备的类型</title>
+      <link>https://rench1988.github.io/2019/12/05/nat%E8%AE%BE%E5%A4%87%E7%9A%84%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Thu, 05 Dec 2019 10:43:30 +0800</pubDate>
+      <author>finyren@example.com (rench)</author>
+      <guid>https://rench1988.github.io/2019/12/05/nat%E8%AE%BE%E5%A4%87%E7%9A%84%E7%B1%BB%E5%9E%8B/</guid>
+      <description>假设有一个客户端(位于nat设置之后), 两个公网服务端。他们对应的地址分别为: 客户端私网地址(192.168.1.99) 客户端nat公网地址(1.1.1.1) 服务器A公网地址(2.2.2.2) 服务器B公网地址(3.3.3.3)
+1. 全纺锤型(Full cone NAT) 设客户端往服务器A发送数据包
+192.168.1.99:11111 =&amp;gt; 2.2.2.2:22222
+nat设备中会记录类似如下的映射关系:
+192.168.1.99:11111 &amp;lt;=&amp;gt; 1.1.1.1:11112
+nat设备同时纪录类似如下的入向过滤列表为:
+(1.1.1.1, 11112, *, *)
+入包只要是发往1.1.1.1:11112, nat设备就会为其转发(不论入包的源地址和端口是啥).
+2. 地址受限型(Restricted Cone NAT) 同&amp;raquo;全纺锤型&amp;raquo;的例子, 只是nat设备记录的入向过滤列表为:
+(1.1.1.1, 11112, 2.2.2.2, *)
+入包被放行的条件是入包的目的地址端口是1.1.1.1:11112且入包的源地址是2.2.2.2
+3. 地址端口受限型(Port Restricted Cone NAT) 同&amp;raquo;全纺锤型&amp;raquo;的例子, 只是nat设备记录的入向过滤列表为
+(1.1.1.1, 11112, 2.2.2.2, 22222)
+入包被放行的条件是入包的目的地址端口是1.1.1.1:11112且源地址是2.2.2.2, 源端口是22222
+假设此时客户端使用同样的地址端口对向服务器B发数据包
+192.168.1.99:11111 =&amp;gt; 3.3.3.3:33333
+nat设备中会记录类似如下的映射关系:
+192.168.1.99:11111 &amp;lt;=&amp;gt; 1.1.1.1:11112
+这个特点是，当源客户主机使用相同的IP、端口号时，NAT通常也会使用相同的IP、端口号予以映射, 入向过滤列表为:
+(1.1.1.1, 11112, 2.2.2.2, 22222)
+(1.1.1.1, 11112, 3.3.3.3, 33333)
+4. 对称型(Symmetric NAT) 同&amp;raquo;地址端口受限型&amp;raquo;的例子, 只是当客户端使用同样的地址端口对向服务器B发数据包时</description>
+    </item>
+    
+  </channel>
+</rss>
