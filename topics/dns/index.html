@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Posts  &middot; rench&#39;s blog</title>
+  <title>Dns  &middot; rench&#39;s blog</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -17,9 +17,9 @@
 <meta name="keywords" content="">
 
 
-<meta property="og:title" content="Posts  &middot; rench&#39;s blog ">
+<meta property="og:title" content="Dns  &middot; rench&#39;s blog ">
 <meta property="og:site_name" content="rench&#39;s blog"/>
-<meta property="og:url" content="https://rench1988.github.io/post/" />
+<meta property="og:url" content="https://rench1988.github.io/topics/dns/" />
 <meta property="og:locale" content="en-EN">
 
 
@@ -27,9 +27,9 @@
 
 
 
-<link href="https://rench1988.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="Posts" />
+<link href="https://rench1988.github.io/topics/dns/index.xml" rel="alternate" type="application/rss+xml" title="Dns" />
 
-<link rel="canonical" href="https://rench1988.github.io/post/" />
+<link rel="canonical" href="https://rench1988.github.io/topics/dns/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://rench1988.github.io/touch-icon-144-precomposed.png">
 <link href="https://rench1988.github.io/favicon.png" rel="icon">
@@ -139,14 +139,15 @@
 </header>
 
 
-<section id="main-content" class="container main_content section">
+<section id="main-content" class="container main_content">
   <header class="container">
-    <h1>Posts
+    <h1>Dns
 </h1>
 
   </header>
   
-    <div class="container hat">
+    <article class="container content summary">
+  <div class="container hat">
   <h2><a href="https://rench1988.github.io/2019/12/10/dns-srv-record/">Dns Srv Record
 </a>
 </h2>
@@ -155,61 +156,29 @@
 
 </div>
 
-
+  <p class="container content">
   
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/12/05/nat%E8%AE%BE%E5%A4%87%E7%9A%84%E7%B1%BB%E5%9E%8B/">Nat设备的类型
-</a>
-</h2>
+  
+    srv record srv record是用于发现网络上指定服务的dns record, 比如网络电话使用srv record指定SIP服务的地址.
+srv record里面的域名通常定义了一个符号名和传输协议, srv record里面还包含优先级, 权重, 端口, 服务目的地址.
+以下是两条srv记录的例子
+&gt; _sip._tcp.example.com. 3600 IN SRV 10 60 5060 bigbox.example.com. &gt; _sip._tcp.example.com. 3600 IN SRV 10 20 5060 smallbox1.example.com.
+_sip是符号名, _tcp是传输协议, 符号名和传输协议通常以下划线开头.
+两条记录的优先级都是10, 第一条记录的权重是60, 第二条记录的权重是20. 优先级和权重决定了选择策略.
+最后的两个字段定义了端口和服务地址.
+  
 
-  <time datetime="2019-12-05">5 Dec, 2019</time>
+
+</p>
+
+
+  <div class="container readlink">
+  <a href="https://rench1988.github.io/2019/12/10/dns-srv-record/">Read more &rarr;</a>
 
 </div>
 
 
-  
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/">lte ip address allocation
-</a>
-</h2>
-
-  <time datetime="2019-02-25">25 Feb, 2019</time>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/01/31/lte-tunnel/">lte tunnel
-</a>
-</h2>
-
-  <time datetime="2019-01-31">31 Jan, 2019</time>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2018/11/20/golang-article/">golang article
-</a>
-</h2>
-
-  <time datetime="2018-11-20">20 Nov, 2018</time>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2018/11/20/libpcap%E4%B8%ADsnapshot-length%E7%9A%84%E4%BD%9C%E7%94%A8/">libpcap中snapshot length的作用
-</a>
-</h2>
-
-  <time datetime="2018-11-20">20 Nov, 2018</time>
-
-</div>
-
+</article>
 
   
   

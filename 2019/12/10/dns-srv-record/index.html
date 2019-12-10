@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Posts  &middot; rench&#39;s blog</title>
+  <title>Dns Srv Record  &middot; rench&#39;s blog</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -14,22 +14,46 @@
 
 <meta name="description" content="" />
 
-<meta name="keywords" content="">
+<meta name="keywords" content="network, ">
 
 
-<meta property="og:title" content="Posts  &middot; rench&#39;s blog ">
+<meta property="og:title" content="Dns Srv Record  &middot; rench&#39;s blog ">
 <meta property="og:site_name" content="rench&#39;s blog"/>
-<meta property="og:url" content="https://rench1988.github.io/post/" />
+<meta property="og:url" content="https://rench1988.github.io/2019/12/10/dns-srv-record/" />
 <meta property="og:locale" content="en-EN">
 
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2019-12-10T09:39:14&#43;08:00" />
+<meta property="og:article:modified_time" content="2019-12-10T09:39:14&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="network">
+    
+  
+
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Dns Srv Record",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2019-12-10",
+    "description": "",
+    "wordCount": 41
+  }
+</script>
 
 
 
-<link href="https://rench1988.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="Posts" />
-
-<link rel="canonical" href="https://rench1988.github.io/post/" />
+<link rel="canonical" href="https://rench1988.github.io/2019/12/10/dns-srv-record/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://rench1988.github.io/touch-icon-144-precomposed.png">
 <link href="https://rench1988.github.io/favicon.png" rel="icon">
@@ -139,82 +163,88 @@
 </header>
 
 
-<section id="main-content" class="container main_content section">
-  <header class="container">
-    <h1>Posts
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Dns Srv Record
 </h1>
 
-  </header>
-  
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/12/10/dns-srv-record/">Dns Srv Record
-</a>
-</h2>
+  <div class="metas">
+<time datetime="2019-12-10">10 Dec, 2019</time>
 
-  <time datetime="2019-12-10">10 Dec, 2019</time>
+
+  
+  &middot; Read in about 1 min
+  &middot; (41 Words)
+  <br>
+  
+<a class="label" href="https://rench1988.github.io/tags/network">network</a>
+
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<h3 id="srv-record">srv record</h3>
+
+<p>srv record是用于发现网络上指定服务的dns record, 比如网络电话使用srv record指定SIP服务的地址.<br />
+srv record里面的域名通常定义了一个符号名和传输协议, srv record里面还包含优先级, 权重, 端口, 服务目的地址.<br />
+以下是两条srv记录的例子<br />
+&gt; _sip._tcp.example.com.   3600 IN    SRV 10       60     5060 bigbox.example.com.
+&gt; _sip._tcp.example.com.   3600 IN    SRV 10       20     5060 smallbox1.example.com.<br />
+_sip是符号名, _tcp是传输协议, 符号名和传输协议通常以下划线开头.<br />
+两条记录的优先级都是10, 第一条记录的权重是60, 第二条记录的权重是20. 优先级和权重决定了选择策略.<br />
+最后的两个字段定义了端口和服务地址.</p>
 
 </div>
 
 
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
   
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/12/05/nat%E8%AE%BE%E5%A4%87%E7%9A%84%E7%B1%BB%E5%9E%8B/">Nat设备的类型
-</a>
-</h2>
+  
 
-  <time datetime="2019-12-05">5 Dec, 2019</time>
+    
+    <a class="prev" href="https://rench1988.github.io/2019/12/05/nat%E8%AE%BE%E5%A4%87%E7%9A%84%E7%B1%BB%E5%9E%8B/" title="Nat设备的类型">
+      Previous
+    </a>
+    
+
+    
+
+  
+
 
 </div>
 
-
+  <div class="container comments">
+  <h2>Comments</h2>
   
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/02/25/lte-ip-address-allocation/">lte ip address allocation
-</a>
-</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
 
-  <time datetime="2019-02-25">25 Feb, 2019</time>
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//enten.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 
 </div>
 
+</footer>
 
-  
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2019/01/31/lte-tunnel/">lte tunnel
-</a>
-</h2>
-
-  <time datetime="2019-01-31">31 Jan, 2019</time>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2018/11/20/golang-article/">golang article
-</a>
-</h2>
-
-  <time datetime="2018-11-20">20 Nov, 2018</time>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://rench1988.github.io/2018/11/20/libpcap%E4%B8%ADsnapshot-length%E7%9A%84%E4%BD%9C%E7%94%A8/">libpcap中snapshot length的作用
-</a>
-</h2>
-
-  <time datetime="2018-11-20">20 Nov, 2018</time>
-
-</div>
-
-
-  
-  
-
-</section>
+</article>
       <footer id="main-footer" class="container main_footer">
   
 
