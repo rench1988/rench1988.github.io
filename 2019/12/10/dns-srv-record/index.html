@@ -191,11 +191,13 @@
 <h3 id="srv-record">srv record</h3>
 
 <p>srv record是用于发现网络上指定服务的dns record, 比如网络电话使用srv record指定SIP服务的地址.<br />
-srv record里面的域名通常定义了一个符号名和传输协议, srv record里面还包含优先级, 权重, 端口, 服务目的地址.<br />
-以下是两条srv记录的例子<br />
-&gt; _sip._tcp.example.com.   3600 IN    SRV 10       60     5060 bigbox.example.com.
-&gt; _sip._tcp.example.com.   3600 IN    SRV 10       20     5060 smallbox1.example.com.<br />
-_sip是符号名, _tcp是传输协议, 符号名和传输协议通常以下划线开头.<br />
+srv record里面的域名通常定义了一个符号名和传输协议, srv record里面还包含优先级, 权重, 端口, 服务目的地址.</p>
+
+<p>以下是两条srv记录的例子:<br />
+&gt; _sip._tcp.example.com.   3600 IN    SRV 10       60     5060 bigbox.example.com.<br />
+&gt; _sip._tcp.example.com.   3600 IN    SRV 10       20     5060 smallbox1.example.com.</p>
+
+<p>_sip是符号名, _tcp是传输协议, 符号名和传输协议通常以下划线开头.<br />
 两条记录的优先级都是10, 第一条记录的权重是60, 第二条记录的权重是20. 优先级和权重决定了选择策略.<br />
 最后的两个字段定义了端口和服务地址.</p>
 
