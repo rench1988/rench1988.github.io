@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Tags  &middot; rench&#39;s blog</title>
+  <title>Tcp/Ip  &middot; rench&#39;s blog</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -17,9 +17,9 @@
 <meta name="keywords" content="">
 
 
-<meta property="og:title" content="Tags  &middot; rench&#39;s blog ">
+<meta property="og:title" content="Tcp/Ip  &middot; rench&#39;s blog ">
 <meta property="og:site_name" content="rench&#39;s blog"/>
-<meta property="og:url" content="https://rench1988.github.io/tags/" />
+<meta property="og:url" content="https://rench1988.github.io/topics/tcp-ip/" />
 <meta property="og:locale" content="en-EN">
 
 
@@ -27,9 +27,9 @@
 
 
 
-<link href="https://rench1988.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="Tags" />
+<link href="https://rench1988.github.io/topics/tcp-ip/index.xml" rel="alternate" type="application/rss+xml" title="Tcp/Ip" />
 
-<link rel="canonical" href="https://rench1988.github.io/tags/" />
+<link rel="canonical" href="https://rench1988.github.io/topics/tcp-ip/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://rench1988.github.io/touch-icon-144-precomposed.png">
 <link href="https://rench1988.github.io/favicon.png" rel="icon">
@@ -139,53 +139,58 @@
 </header>
 
 
-<article id="main-content" class="container main_content terms">
+<section id="main-content" class="container main_content">
   <header class="container">
-    <h1>Tags
+    <h1>Tcp/Ip
 </h1>
 
   </header>
-  <ul class="container content">
+  
+    <article class="container content summary">
+  <div class="container hat">
+  <h2><a href="https://rench1988.github.io/2019/12/12/%E7%90%86%E8%A7%A3ip%E5%88%86%E7%89%87/">理解ip分片
+</a>
+</h2>
+
+  <time datetime="2019-12-12">12 Dec, 2019</time>
+
+</div>
+
+  <p class="container content">
   
   
-    <li>
-      <a href="/tags/network">
-        network
-      </a>
-      <strong>
-        3
-      </strong>
-    </li>
+    ip数据包在经过每一个链路的时候, 如果ip数据包的大小大于链路的MTU就会进行分片.
+如果该ip数据包有don&rsquo;t fragment的标记, 则链路设备会丢弃该过大的ip数据包.
+ip数据包在进行分片后, 目的主机需要以下信息进行包重组:
+1. Fragment ID —所有属于同一个原始ip数据包的分片拥有一个同样的值.
+2. Place &amp; Offset —标识分片在原始ip数据包中的位置.
+3. Length —分片的长度
+4. MF flag —指示该分片包是否可以继续分片.
+假设有一个4000个字节的icmp数据包(包含20个字节的ip头部, 8个字节的icmp协议头, 3972个字节的应用数据).
+该数据包在经过MTU为1500的链路时, 会进行分片, 分片后如下图:
+tcpdump抓包显示如下:
+&gt;client.com &gt; server.com: icmp: echo request (frag 21233 : 1472@0+)
+&gt;client.com &gt; server.com: icmp: echo request (frag 21233 : 1480@1472+)
+&gt;client.com &gt; server.com: icmp: echo request (frag 21233 : 1020@2952)
+其中21233表示Fragment ID, 1472@0+表示从0个字节开始的1472个字节.
   
-    <li>
-      <a href="/tags/lte">
-        lte
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
-  
-    <li>
-      <a href="/tags/golang">
-        golang
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="/tags/libpcap">
-        libpcap
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-  </ul>
+
+
+</p>
+
+
+  <div class="container readlink">
+  <a href="https://rench1988.github.io/2019/12/12/%E7%90%86%E8%A7%A3ip%E5%88%86%E7%89%87/">Read more &rarr;</a>
+
+</div>
+
+
 </article>
+
+  
+  
+
+</section>
       <footer id="main-footer" class="container main_footer">
   
 

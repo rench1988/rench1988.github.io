@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tcp/Ip on rench&#39;s blog</title>
+    <link>https://rench1988.github.io/topics/tcp-ip/</link>
+    <description>Recent content in Tcp/Ip on rench&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-EN</language>
+    <managingEditor>finyren@example.com (rench)</managingEditor>
+    <webMaster>finyren@example.com (rench)</webMaster>
+    <copyright>(c) 2015 rench.</copyright>
+    <lastBuildDate>Thu, 12 Dec 2019 17:15:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://rench1988.github.io/topics/tcp-ip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>理解ip分片</title>
+      <link>https://rench1988.github.io/2019/12/12/%E7%90%86%E8%A7%A3ip%E5%88%86%E7%89%87/</link>
+      <pubDate>Thu, 12 Dec 2019 17:15:42 +0800</pubDate>
+      <author>finyren@example.com (rench)</author>
+      <guid>https://rench1988.github.io/2019/12/12/%E7%90%86%E8%A7%A3ip%E5%88%86%E7%89%87/</guid>
+      <description>ip数据包在经过每一个链路的时候, 如果ip数据包的大小大于链路的MTU就会进行分片.
+如果该ip数据包有don&amp;rsquo;t fragment的标记, 则链路设备会丢弃该过大的ip数据包.
+ip数据包在进行分片后, 目的主机需要以下信息进行包重组:
+1. Fragment ID —所有属于同一个原始ip数据包的分片拥有一个同样的值.
+2. Place &amp;amp; Offset —标识分片在原始ip数据包中的位置.
+3. Length —分片的长度
+4. MF flag —指示该分片包是否可以继续分片.
+假设有一个4000个字节的icmp数据包(包含20个字节的ip头部, 8个字节的icmp协议头, 3972个字节的应用数据).
+该数据包在经过MTU为1500的链路时, 会进行分片, 分片后如下图:
+tcpdump抓包显示如下:
+&amp;gt;client.com &amp;gt; server.com: icmp: echo request (frag 21233 : 1472@0+)
+&amp;gt;client.com &amp;gt; server.com: icmp: echo request (frag 21233 : 1480@1472+)
+&amp;gt;client.com &amp;gt; server.com: icmp: echo request (frag 21233 : 1020@2952)
+其中21233表示Fragment ID, 1472@0+表示从0个字节开始的1472个字节.</description>
+    </item>
+    
+  </channel>
+</rss>
