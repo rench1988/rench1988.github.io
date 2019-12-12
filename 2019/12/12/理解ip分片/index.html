@@ -47,7 +47,7 @@
     },
     "datePublished": "2019-12-12",
     "description": "",
-    "wordCount": 63
+    "wordCount": 69
   }
 </script>
 
@@ -174,7 +174,7 @@
 
   
   &middot; Read in about 1 min
-  &middot; (63 Words)
+  &middot; (69 Words)
   <br>
   
 <a class="label" href="https://rench1988.github.io/tags/network">network</a>
@@ -204,11 +204,13 @@
 <img src="https://miro.medium.com/max/1714/1*LKvt5c4m2Eprz3o8EcKIWA.png" alt="icmp packet fragment" /></p>
 
 <p>tcpdump抓包显示如下:<br />
-&gt;client.com &gt; server.com: icmp: echo request (frag 21233 : 1472@0+)<br />
-&gt;client.com &gt; server.com: icmp: echo request (frag 21233 : 1480@1472+)<br />
-&gt;client.com &gt; server.com: icmp: echo request (frag 21233 : 1020@2952)</p>
+&gt; client.com &gt; server.com: icmp: echo request (frag 21233 : 1472@0+)<br />
+&gt; client.com &gt; server.com: icmp: echo request (frag 21233 : 1480@1472+)<br />
+&gt; client.com &gt; server.com: icmp: echo request (frag 21233 : 1020@2952)</p>
 
 <p>其中21233表示Fragment ID, 1472@0+表示从0个字节开始的1472个字节.</p>
+
+<p>ip分片如果有一个分片丢包则会造成整个ip数据包重传, 因此分片会影响性能, 要尽量避免分片.</p>
 
 </div>
 

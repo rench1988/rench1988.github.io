@@ -173,10 +173,11 @@ ip数据包在进行分片后, 目的主机需要以下信息进行包重组:
 假设有一个4000个字节的icmp数据包(包含20个字节的ip头部, 8个字节的icmp协议头, 3972个字节的应用数据).
 该数据包在经过MTU为1500的链路时, 会进行分片, 分片后如下图:
 tcpdump抓包显示如下:
-&gt;client.com &gt; server.com: icmp: echo request (frag 21233 : 1472@0+)
-&gt;client.com &gt; server.com: icmp: echo request (frag 21233 : 1480@1472+)
-&gt;client.com &gt; server.com: icmp: echo request (frag 21233 : 1020@2952)
+&gt; client.com &gt; server.com: icmp: echo request (frag 21233 : 1472@0+)
+&gt; client.com &gt; server.com: icmp: echo request (frag 21233 : 1480@1472+)
+&gt; client.com &gt; server.com: icmp: echo request (frag 21233 : 1020@2952)
 其中21233表示Fragment ID, 1472@0+表示从0个字节开始的1472个字节.
+ip分片如果有一个分片丢包则会造成整个ip数据包重传, 因此分片会影响性能, 要尽量避免分片.
   
 
 
